@@ -43,7 +43,7 @@ $(document).ready(function(){
     displayQuestion();
   };
 
-//  $('#next').on('keydown', getNextQuestion());   EVENT FIRES WITHOUT CLICK AND I HAVE NO DAMN IDEA WHY
+  $('#next').on('click', getNextQuestion());   //EVENT FIRES WITHOUT CLICK AND I HAVE NO DAMN IDEA WHY
 
   displayQuestion()
 
