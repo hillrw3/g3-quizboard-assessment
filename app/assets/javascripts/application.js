@@ -20,8 +20,8 @@ $(document).ready(function(){
       getQuestion();
       var question = localStorage.getItem('setQuestion');
       question = JSON.parse(question);
-      var state = question[questionNumber - 1].description;
-      var possible_answers = question[questionNumber - 1].possible_answers;
+      var state = question[0].description;
+      var possible_answers = question[0].possible_answers;
       function first_question(){
         $('.question').append(state);
         possible_answers.forEach(function(answer){
@@ -37,7 +37,6 @@ $(document).ready(function(){
 
   var getNextQuestion = function() {
     questionNumber = questionNumber + 1;
-    getQuestion();
     console.log("hello");
     console.log(questionNumber);
     displayQuestion();
@@ -45,7 +44,6 @@ $(document).ready(function(){
 
   $('#next').on('click', getNextQuestion());   //EVENT FIRES WITHOUT CLICK AND I HAVE NO DAMN IDEA WHY
 
-  displayQuestion()
 
 
 
